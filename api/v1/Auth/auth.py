@@ -10,7 +10,10 @@ class Auth:
 
     def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
         """ Method for validating if endpoint requires auth """
-        pass
+        if path is None or excluded_paths is None or excluded_paths == []:
+            return True
+        if path in excluded_paths:
+            return False
 
     def authorization_header(self, request=None) -> str:
         """ Method that handles authorization header """
