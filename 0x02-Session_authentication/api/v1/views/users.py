@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
- Users views.
+Module of Users views.
 """
 from api.v1.views import app_views
 from flask import abort, jsonify, request
